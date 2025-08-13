@@ -1,5 +1,5 @@
 <template>
-  <div class="header">IT 02-1</div>
+  <div class="header">IT 02-1 </div>
   <div class="login-container">
     <form @submit.prevent="onLogin">
       <div>
