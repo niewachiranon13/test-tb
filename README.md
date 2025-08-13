@@ -29,6 +29,13 @@ cd backend
 go run main.go
 ```
 
+### Testing Backend
+
+```bash
+cd backend
+go test -v
+```
+
 ---
 
 ## Project Structure
@@ -43,3 +50,5 @@ go run main.go
 - Implement registration and login UI
 - Implement backend endpoints for registration, login, and JWT validation
 - Connect frontend to backend
+
+
