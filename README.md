@@ -36,6 +36,12 @@ cd backend
 go test -v
 ```
 
+### Database
+
+```bash
+docker run --name testtb-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=testtb -p 5432:5432 -d postgres:latest
+```
+
 ---
 
 ## Project Structure
