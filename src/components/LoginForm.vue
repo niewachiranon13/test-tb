@@ -1,6 +1,6 @@
 <template>
+  <div class="header">IT 02-1</div>
   <div class="login-container">
-    <div class="header">IT 02-1</div>
     <form @submit.prevent="onLogin">
       <div>
         <label>User</label>
@@ -33,7 +33,7 @@ async function onLogin() {
  
     const payload = {
       username: loginForm.value.username,
-      password: loginForm.value.password
+  password: btoa(loginForm.value.password)
     }
     const res = await fetch('/api/login', {
       method: 'POST',
@@ -60,12 +60,25 @@ async function onLogin() {
   background: #fff;
 }
 .header {
+  width: 100vw;
   background: #22a322;
   color: #fff;
-  padding: 8px;
+  padding: 16px 0;
   text-align: center;
-  margin-bottom: 24px;
   font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.login-container {
+  max-width: 400px;
+  margin: 80px auto 40px auto;
+  border: 1px solid #ccc;
+  padding: 32px;
+  border-radius: 8px;
+  background: #fff;
 }
 form > div {
   margin-bottom: 16px;

@@ -1,6 +1,7 @@
 <template>
+   <div class="header">IT 02-2</div>
   <div class="register-container">
-    <div class="header">IT 02-2</div>
+   
     <form @submit.prevent="onRegister">
       <div>
         <label>User</label>
@@ -68,12 +69,17 @@ async function onRegister() {
   background: #fff;
 }
 .header {
+  width: 100vw;
   background: #22a322;
   color: #fff;
-  padding: 8px;
+  padding: 16px 0;
   text-align: center;
-  margin-bottom: 24px;
   font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 form > div {
   margin-bottom: 16px;
